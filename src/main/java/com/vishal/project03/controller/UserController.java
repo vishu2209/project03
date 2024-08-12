@@ -55,4 +55,8 @@ public class UserController {
         return userServiceImpl.saveAll(users);
     }
 
+    @PostMapping("/addCustomerUser")
+    public User addCustomerUser(@RequestParam Long customerId, @RequestBody User user) {
+        return userServiceImpl.addCustomerUser(customerId, user);
+    }
 }
