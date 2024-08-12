@@ -12,5 +12,5 @@ public interface UserService {
     User updateById(Long id, User user);
     List<User> saveAll(List<User> users);
     List<User> getAll(String search, String sortBy, String sortDirection);
-
+    User addCustomerUser(Long customerId, User user);
 }
