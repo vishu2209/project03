@@ -50,4 +50,15 @@ public class Customer {
     public LocalDate getEstablishmentDate() {
         return establishmentDate;
     }
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Department> departments = new ArrayList<>();
+
+    public List<Department> getDepartments() {
+    return departments;
+    }
+
+    public void setDepartments(List<Department> departments) {
+    this.departments = departments;
+    }
 }
